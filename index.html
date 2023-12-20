@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carta Especial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .titulo {
+            font-size: 8vw;
+            margin-top: 5vw;
+            color: red;
+            max-width: 90vw;
+            /* Ajuste máximo al ancho de la pantalla */
+            text-align: center;
+            /* Centrado del texto */
+        }
+
+        .sobre {
+            width: 70vw;
+            max-width: 300px;
+            height: 40vh;
+            max-height: 200px;
+            background-image: url('./portada.png');
+            background-size: cover;
+            margin: 5vh auto;
+        }
+
+        .carta {
+            display: none;
+            text-align: center;
+            padding: 5vw;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5vw;
+            padding: 1vw;
+        }
+
+        .imagenes img {
+            width: 45%;
+            /* Ancho fijo para todas las imágenes */
+            margin-bottom: 2vw;
+            border-radius: 5px;
+        }
+
+        .botones button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: red;
+            /* Color rojo */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .titulo {
+                font-size: 8vw;
+                margin-top: 8vw;
+            }
+
+            .sobre {
+                width: 80vw;
+                max-width: 250px;
+                height: 30vh;
+                max-height: 150px;
+                margin: 8vw auto;
+            }
+
+            .carta {
+                padding: 8vw;
+            }
+
+            .imagenes img {
+                width: calc(50% - 4vw);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titulo">🎅Carta Especial de Santa🎅</div>
+
+    <div class="sobre"></div>
+
+    <div class="carta" id="miCarta">
+        <p>❤️ ¡Unas fotitos juntitos! ❤️</p>
+        <div class="imagenes">
+            <!-- Agregar imágenes -->
+            <img src="./2.svg" alt="Imagen 2">
+            <img src="./3.jpeg" alt="Imagen 3">
+        </div>
+        <p>¡Hola amor! ¿Cómo estás? ❤️</p>
+        <p> Quería dejarte algo especial bajo el árbol 🤭, aunque no estaré aquí para celebrar contigo. Quiero
+            recordarte lo mucho que te AMO ❤️ y recordar algunos momentos que compartimos, desde las risas locas hasta esos
+            abrazos reconfortantes, son lo más valioso para mi.
+            Este regalo que te dejo es para que te mantengas calentita y sientas que te estoy abrazando. No es gran
+            cosa, pero espero que te mantenga calentita estos dias que no estare.
+            No dejaré de pensar en ti ni un segundo. Estaré lejos, pero siempre estaré pensando en ti 🥹 No puedo
+            esperar para estar juntitos otra vez 🤭❤️
+
+            Te mando un montón de abrazos y besos😘😘😘😘❤️</p>
+    </div>
+
+    <div class="botones">
+        <button id="abrirCerrar" onclick="toggleCarta()">Abrir Carta</button>
+        <button id="cerrar" style="display: none;" onclick="cerrarCarta()">Cerrar</button>
+    </div>
+
+    <video autoplay muted loop>
+        <source src="./video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento video.
+    </video>
+
+    <script>
+        function toggleCarta() {
+            var sobre = document.querySelector('.sobre');
+            var carta = document.getElementById('miCarta');
+            var botonAbrirCerrar = document.getElementById('abrirCerrar');
+            var botonCerrar = document.getElementById('cerrar');
+
+            sobre.style.display = 'none';
+            carta.style.display = 'block';
+            botonAbrirCerrar.style.display = 'none';
+            botonCerrar.style.display = 'block';
+        }
+
+        function cerrarCarta() {
+            var sobre = document.querySelector('.sobre');
+            var carta = document.getElementById('miCarta');
+            var botonAbrirCerrar = document.getElementById('abrirCerrar');
+            var botonCerrar = document.getElementById('cerrar');
+
+            sobre.style.display = 'block';
+            carta.style.display = 'none';
+            botonAbrirCerrar.style.display = 'block';
+            botonCerrar.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
