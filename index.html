@@ -30,13 +30,11 @@
         }
 
         .titulo {
-            font-size: 8vw;
+            font-size: 5vw;
             margin-top: 5vw;
             color: red;
             max-width: 90vw;
-            /* Ajuste máximo al ancho de la pantalla */
             text-align: center;
-            /* Centrado del texto */
         }
 
         .sobre {
@@ -55,6 +53,8 @@
             padding: 5vw;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
+            overflow-y: auto; /* Agregando desplazamiento vertical */
+            height: 70vh; /* Altura fija del contenedor */
         }
 
         .imagenes {
@@ -67,7 +67,6 @@
 
         .imagenes img {
             width: 45%;
-            /* Ancho fijo para todas las imágenes */
             margin-bottom: 2vw;
             border-radius: 5px;
         }
@@ -77,7 +76,6 @@
             margin: 5px;
             font-size: 16px;
             background-color: red;
-            /* Color rojo */
             color: white;
             border: none;
             border-radius: 5px;
@@ -100,6 +98,7 @@
 
             .carta {
                 padding: 8vw;
+                height: 70vh;
             }
 
             .imagenes img {
@@ -115,22 +114,24 @@
     <div class="sobre"></div>
 
     <div class="carta" id="miCarta">
-        <p>❤️ ¡Unas fotitos juntitos! ❤️</p>
-        <div class="imagenes">
-            <!-- Agregar imágenes -->
-            <img src="./2.svg" alt="Imagen 2">
-            <img src="./3.jpeg" alt="Imagen 3">
+        <!-- Contenedor con desplazamiento vertical -->
+        <div class="contenido">
+            <p>❤️ ¡Unas fotitos juntitos! ❤️</p>
+            <div class="imagenes">
+                <img src="./2.svg" alt="Imagen 2">
+                <img src="./3.jpeg" alt="Imagen 3">
+            </div>
+            <p>¡Hola amor! ¿Cómo estás? ❤️</p>
+            <p> Quería dejarte algo especial bajo el árbol 🤭, aunque no estaré aquí para celebrar contigo. Quiero
+                recordarte lo mucho que te AMO ❤️ y recordar algunos momentos que compartimos, desde las risas locas hasta esos
+                abrazos reconfortantes, son lo más valioso para mi.
+                Este regalo que te dejo es para que te mantengas calentita y sientas que te estoy abrazando. No es gran
+                cosa, pero espero que te mantenga calentita estos dias que no estare.
+                No dejaré de pensar en ti ni un segundo. Estaré lejos, pero siempre estaré pensando en ti 🥹 No puedo
+                esperar para estar juntitos otra vez 🤭❤️
+    
+                Te mando un montón de abrazos y besos😘😘😘❤️</p>
         </div>
-        <p>¡Hola amor! ¿Cómo estás? ❤️</p>
-        <p> Quería dejarte algo especial bajo el árbol 🤭, aunque no estaré aquí para celebrar contigo. Quiero
-            recordarte lo mucho que te AMO ❤️ y recordar algunos momentos que compartimos, desde las risas locas hasta esos
-            abrazos reconfortantes, son lo más valioso para mi.
-            Este regalo que te dejo es para que te mantengas calentita y sientas que te estoy abrazando. No es gran
-            cosa, pero espero que te mantenga calentita estos dias que no estare.
-            No dejaré de pensar en ti ni un segundo. Estaré lejos, pero siempre estaré pensando en ti 🥹 No puedo
-            esperar para estar juntitos otra vez 🤭❤️
-
-            Te mando un montón de abrazos y besos😘😘😘😘❤️</p>
     </div>
 
     <div class="botones">
